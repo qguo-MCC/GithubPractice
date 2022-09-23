@@ -32,3 +32,4 @@ if __name__ == '__main__':
     #use debug to find out how does the function work step by step or if there was an error.
     logger.info(f'The result of adding {x} and {y} is: {result}')
     #use pythong logging instead of printing to save important messages into files.
+    #add a note for branch test
