@@ -13,7 +13,7 @@ def add_int(x: int, y: int) -> int:
 
     assert type(x) == int
     assert type(y) == int
-    #use assertion to ensure input data meet requirements
+    #use assert to ensure input data meet requirements or validate results
 
     int_x = int(x)
     int_y = int(y)
@@ -31,4 +31,4 @@ if __name__ == '__main__':
     result = add_int(x=x, y=y)
     #use debug to find out how does the function work step by step or if there was an error.
     logger.info(f'The result of adding {x} and {y} is: {result}')
-    #use pythong logging instead of printing to save important messages into files.
+    #use pythong logging instead of printing to save important messages to files.
