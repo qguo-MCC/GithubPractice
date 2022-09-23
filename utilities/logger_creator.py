@@ -1,8 +1,14 @@
 import logging
 import sys
 import os
-
-def map_logging_level(level_text):
+from typing import Tuple
+def map_logging_level(level_text: str) ->int:
+    '''
+    Map str logging level to logging level integer
+    :param level_text: a str represent the logging level, warning, info, error, debug.
+    :return: an integer code in python logging represent the logging level
+    '''
+    assert type(level_text) == str
 
     if level_text == 'warning':
         level = logging.WARNING
@@ -15,11 +21,20 @@ def map_logging_level(level_text):
     else:
         raise ValueError('Level {} for logging is not supported'.format(level_text))
     return level
+
 def logger_creator(
         filepath: str,
         format: str = '%(asctime)s %(levelname)s %(funcName)s %(message)s',
         handler_level: str = 'info'
-):
+)->Tuple[logging.Logger, logging.Logger]:
+    '''
+    Create a looger and a warning loggers
+    :param filepath: str log file path
+    :param format: logging format str
+    :param handler_level: logging level
+    :return: a tuple consists of a regular logger and a warning logger
+    '''
+
     logging.captureWarnings(True)
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
