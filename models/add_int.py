@@ -21,8 +21,7 @@ def add_int(x: int, y: int) -> int:
 
     return result
 
-def multiple(x: int, y: int) -> int:
-    return x*y
+
 if __name__ == '__main__':
     from pathlib import Path
     from datetime import datetime

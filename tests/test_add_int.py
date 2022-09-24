@@ -1,5 +1,5 @@
 import pytest
-
+#To save pytest result to a local file, just click the export button in the lower left panel.
 from models.add_int import add_int
 
 def test_add_two_int():
