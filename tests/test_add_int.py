@@ -1,5 +1,7 @@
 import pytest
+
 from models.add_int import add_int
+
 def test_add_two_int():
     assert add_int(1,2) == 3
 

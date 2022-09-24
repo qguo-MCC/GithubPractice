@@ -11,16 +11,18 @@ def add_int(x: int, y: int) -> int:
     '''
     #use doc str for documentation, help()
 
-    assert type(x) == int
-    assert type(y) == int
+    assert type(x) == int, 'input variable x is not an integer.'
+    assert type(y) == int, 'input variable y is not an integer.'
     #use assert to ensure input data meet requirements or validate results
 
-    int_x = int(x)
+    int_x = int(x) #int_x and Int_y are redundant, just created them to demonstrate debugging.
     int_y = int(y)
     result = int_x + int_y
 
     return result
 
+def multiple(x: int, y: int) -> int:
+    return x*y
 if __name__ == '__main__':
     from pathlib import Path
     from datetime import datetime
