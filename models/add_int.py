@@ -1,6 +1,6 @@
 from utilities.logger_creator import logger_creator
 
-def add_int(x: int, y: int) -> int:
+def add_int(x: int, y: int) -> int: # function name should be lower case separated by _
     #add type hints to variables for clairity
 
     '''
@@ -25,7 +25,7 @@ def add_int(x: int, y: int) -> int:
 if __name__ == '__main__':
     from pathlib import Path
     from datetime import datetime
-    save_dir = Path('logs')
+    save_dir = Path('logs') #use Path in pathlib to represent file/directory path
     logger, warnings_logger = logger_creator(save_dir.joinpath(f'add_two_int_main_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.log'))
 
     x = 2
@@ -35,3 +35,4 @@ if __name__ == '__main__':
     #use debug to find out how does the function work step by step or if there was an error.
     logger.info(f'The result of adding {x} and {y} is: {result}')
     #use pythong logging instead of printing to save important messages to files.
+
